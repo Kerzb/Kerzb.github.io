@@ -1,3 +1,4 @@
+
 # Welcome to Jekyll!
 # This config file is meant for settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
@@ -80,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Zhoubin KOU"
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   bio              : "No human is limited."
   location         : "Shenzhen, China"
   employer         :
