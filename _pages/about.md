@@ -12,7 +12,7 @@ I am currently a graduate Student in Electronic and Communication Engineering (E
 
 Education
 -----
-2021.0-Current **Master of Electronic Information** at Tsinghua University, China
+2021.9-Current **Master of Electronic Information** at Tsinghua University, China
 
 2017.9-2021.6 **Bachelor of Informination Engineering** at Southeast University, China
 * Thesis: Design of multi-user intelligent reflective surface communication transmission scheme based on deep reinforcement learning
