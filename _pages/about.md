@@ -17,6 +17,10 @@ Education
 2017.9-2021.6 **Bachelor of Informination Engineering** at Southeast University, China
 * Thesis: Design of multi-user intelligent reflective surface communication transmission scheme based on deep reinforcement learning
 
+Teaching
+-----
+* Teaching Assistant, Intelligent Internet of Things Technology, Fall 2022
+
 Scholarships/Awards
 -----
 
