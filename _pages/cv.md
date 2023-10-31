@@ -13,7 +13,7 @@ redirect_from:
 Cooperating with: Pengcheng Laboratory, Shenzhen, China
 
 * Research on solving wireless communication challenges in Federated Learning (FL)
-* Participated in several research programs on MEC and FL funded by National Science Fund (GrantNo. 61802221)
+* Participated in several research programs on MEC and FL
 * Proposed a cooperative learning framework for resource management in MEC which can effectively reduce delay and alleviate congestion.
 
 ### Design of a multi-user intelligent reflective surface communication transmission scheme
