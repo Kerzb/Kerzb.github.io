@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am currently a graduate Student in Electronic and Communication Engineering (ECE) at [Tsinghua University](https://www.ee.tsinghua.edu.cn/) . Before that, I received my B.S. degree in information engineering from [Southease University](https://www.seu.edu.cn/), Nanjing, China. My current research focuses on System Optimization for Federated Edge Learning in Heterogeneous Setting. 
+I am currently a graduate Student in Electronic and Communication Engineering (ECE) at [Tsinghua University](https://www.ee.tsinghua.edu.cn/) . Before that, I received my B.S. degree in information engineering from [Southease University](https://www.seu.edu.cn/), Nanjing, China. My current research focuses on Federated Edge Learning in Heterogeneous Setting. 
 
 Education
 -----
