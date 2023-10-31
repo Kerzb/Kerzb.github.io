@@ -8,9 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am currently a graduate Student in Electronic and Communication Engineering (ECE) at Tsinghua University. I have a Bachelor of Information Engineering in Southeast University.
-
-My current research focuses on Data Mining and Model Adaptation in Machine Learning at the Edge, helping users mining more useful potential information from the raw data, compressing and adapting the model to resource-limited edge devices. My previous research focuses on applying ML models on CNC machine tools. I also have many experiences in CAD/CAM/CNC disign, C/C++ development, Usability Evaluation and Test, Prototype Develop and Evaluation, etc. I enjoy working in interdisciplinary fields and love ‘‘beautiful’’ things in both science and humanities.
+I am currently a graduate Student in Electronic and Communication Engineering (ECE) at [Tsinghua University](https://www.ee.tsinghua.edu.cn/) . Before that, I received my B.S. degree in information engineering from Southease University ([SEU](https://www.seu.edu.cn/)), Nanjing, China. My current research focuses on System Optimization for Federated Edge Learning in Heterogeneous Setting. 
 
 Education
 -----
