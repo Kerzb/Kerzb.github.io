@@ -10,7 +10,7 @@ author_profile: true
 
 **Z. Kou**, et al, “A Reflection Phase Configuration Method for Intelligent Reflecting Surface Assisted Wireless Communication.” CN202010039285.5. 2022. (Chinese Patent)
 
-Y. Ji, X. Zhong, **Z. Kou**, S. Zhang, H. Li, and Y. Yang, “Efficiency-Boosting Federated Learning in Wireless Networks: A Long-Term Perspective,”_ IEEE Transactions on Vehicular Technology_, vol. 72, no. 7, pp. 9434–9447, Jul. 2023.
+Y. Ji, X. Zhong, **Z. Kou**, S. Zhang, H. Li, and Y. Yang, “Efficiency-Boosting Federated Learning in Wireless Networks: A Long-Term Perspective,”_IEEE Transactions on Vehicular Technology_, vol. 72, no. 7, pp. 9434–9447, Jul. 2023.
 
 Y. Ji, **Z. Kou**, X. Zhong, H. Li, F. Yang and S. Zhang, “Client Selection and Bandwidth Allocation for Federated Learning: An Online Optimization Perspective,” _IEEE Global Communications Conference_, 2022, pp. 5075-5080.
 
