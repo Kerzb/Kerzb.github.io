@@ -33,6 +33,6 @@ Scholarships/Awards
 Interests
 -----
 * Marathon:
-** Marathon PB: 3:30:22
-** Half-Marathon PB: 1:33:04
+  * Marathon PB: 3:30:22
+  * Half-Marathon PB: 1:33:04
 
