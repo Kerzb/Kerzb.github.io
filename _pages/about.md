@@ -29,3 +29,10 @@ Scholarships/Awards
 * Third prize, the 18th Huawei Cup China Graduate Mathematical Contest in Modeling, China, Oct. 2021.
 * Second prize (nationwide), the 14th National Undergraduate Smart Car Race, China, Oct. 2019.
 * Second prize (the East China Division), the 14th National Undergraduate Smart Car Race in East China Region, China, July 2019.
+
+Interests
+-----
+* Marathon:
+** Marathon PB: 3:30:22
+** Half-Marathon PB: 1:33:04
+
