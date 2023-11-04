@@ -32,7 +32,7 @@ Scholarships/Awards
 
 Interests
 -----
-* Marathon:
+* Running:
   * Marathon PB: 3:30:22
   * Half-Marathon PB: 1:33:04
-
+* Mountaineering
