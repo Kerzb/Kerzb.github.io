@@ -1,72 +1,113 @@
-<!doctype html>
-<html lang="en">
- <head>
-  <meta charset="utf-8">
-  <title>Private - Zhoubin Kou</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.svg">
-  <link href="../css/bootstrap2.min.css" rel="stylesheet">
-  <link href="../css/style-oct23.css" rel="stylesheet">
-  <link href="../css/main.css" rel="stylesheet">
-  <style>
-    .private-card {
-      display: block;
-      background: #fff;
-      border: 1px solid #e8e5e0;
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin-bottom: 12px;
-      text-decoration: none;
-      color: #37352f;
-      transition: box-shadow 0.2s, border-color 0.2s;
-    }
-    .private-card:hover {
-      border-color: #2f80ed;
-      box-shadow: 0 2px 8px rgba(47,128,237,0.1);
-      text-decoration: none;
-      color: #37352f;
-    }
-    .private-card h3 {
-      font-size: 1.1em;
-      font-weight: 600;
-      margin: 0 0 6px 0;
-    }
-    .private-card p {
-      font-size: 0.85em;
-      color: #787774;
-      margin: 0;
-    }
-    .private-card .card-icon {
-      font-size: 1.4em;
-      margin-right: 10px;
-      vertical-align: middle;
-    }
-    .back-link {
-      font-size: 0.85em;
-      color: #787774;
-      margin-top: 24px;
-      display: inline-block;
-    }
-  </style>
- </head>
- <body style="text-align: justify;">
-  <div id="fullBody">
-   <div class="container" id="inner">
-    <div class="row mt-5">
-     <div class="col-xs-12">
-      <h1>Private Space</h1>
-      <p style="color: #787774; margin-bottom: 24px;">Personal tools & dashboards. Password-protected.</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Space</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #fafaf8; }
+  #lock-screen {
+    display: flex; justify-content: center; align-items: center;
+    min-height: 100vh; padding: 24px;
+  }
+  .lock-card {
+    background: #fff; border: 1px solid #e8e5e0; border-radius: 12px;
+    padding: 40px; max-width: 380px; width: 100%; text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .lock-icon { font-size: 48px; margin-bottom: 16px; }
+  .lock-card h2 { font-size: 1.2em; font-weight: 600; color: #37352f; margin-bottom: 8px; }
+  .lock-card p { font-size: 0.85em; color: #787774; margin-bottom: 24px; }
+  .lock-card input {
+    width: 100%; border: 1px solid #e8e5e0; border-radius: 8px;
+    padding: 12px 16px; font-size: 1em; outline: none; text-align: center;
+    letter-spacing: 2px; margin-bottom: 16px;
+  }
+  .lock-card input:focus { border-color: #2f80ed; }
+  .lock-card button {
+    width: 100%; background: #37352f; color: #fff; border: none;
+    border-radius: 8px; padding: 12px; font-size: 0.95em; cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .lock-card button:hover { opacity: 0.85; }
+  .error-msg { color: #d44c47; font-size: 0.85em; margin-top: 12px; display: none; }
+</style>
+</head>
+<body>
 
-      <a class="private-card" href="weight/">
-        <span class="card-icon">&#9878;</span>
-        <h3 style="display: inline;">6 Week Weight Tracker</h3>
-        <p style="margin-top: 8px;">2026.04.01 — 2026.05.12 | Track daily weight, view trends, sync across devices.</p>
-      </a>
-
-      <a class="back-link" href="/">&larr; Back to homepage</a>
-     </div>
-    </div>
-   </div>
+<div id="lock-screen">
+  <div class="lock-card">
+    <div class="lock-icon">&#128274;</div>
+    <h2>Private Space</h2>
+    <p>Enter the password to continue.</p>
+    <input type="password" id="pwd-input" placeholder="Password" autofocus
+           onkeydown="if(event.key==='Enter')decrypt()">
+    <button onclick="decrypt()">Unlock</button>
+    <div class="error-msg" id="error-msg">Incorrect password, please try again.</div>
   </div>
- </body>
+</div>
+
+<script>
+const ENCRYPTED = {
+  salt: "Slkp3JwOaxkZ8zA7JtGFqg==",
+  nonce: "GQn2aBJ0J8ftp/vO",
+  ciphertext: "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"
+};
+
+function b64ToBytes(b64) {
+  const bin = atob(b64);
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return bytes;
+}
+
+async function deriveKey(password, salt) {
+  const enc = new TextEncoder();
+  const keyMaterial = await crypto.subtle.importKey(
+    "raw", enc.encode(password), "PBKDF2", false, ["deriveKey"]
+  );
+  return crypto.subtle.deriveKey(
+    { name: "PBKDF2", salt: salt, iterations: 100000, hash: "SHA-256" },
+    keyMaterial,
+    { name: "AES-GCM", length: 256 },
+    false,
+    ["decrypt"]
+  );
+}
+
+async function decrypt() {
+  const pwd = document.getElementById("pwd-input").value;
+  const errEl = document.getElementById("error-msg");
+  errEl.style.display = "none";
+
+  try {
+    const salt = b64ToBytes(ENCRYPTED.salt);
+    const nonce = b64ToBytes(ENCRYPTED.nonce);
+    const ciphertext = b64ToBytes(ENCRYPTED.ciphertext);
+    const key = await deriveKey(pwd, salt);
+
+    const decrypted = await crypto.subtle.decrypt(
+      { name: "AES-GCM", iv: nonce },
+      key,
+      ciphertext
+    );
+
+    const html = new TextDecoder().decode(decrypted);
+
+    // Store password for sub-pages (weight tracker etc.)
+    sessionStorage.setItem("_wt_pwd", pwd);
+
+    document.open();
+    document.write(html);
+    document.close();
+  } catch (e) {
+    errEl.style.display = "block";
+    document.getElementById("pwd-input").value = "";
+    document.getElementById("pwd-input").focus();
+  }
+}
+</script>
+
+</body>
 </html>
