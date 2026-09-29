@@ -1,6 +1,13 @@
 [
   {
-    "title": "Semi-Asynchronous Over-the-Air Federated Learning over Heterogeneous Edge Devices",
+    "title": "<b>Lean Clients, Full Accuracy: Hybrid Zeroth- and First-Order Split Federated Learning</b>",
+    "author": "<b>Zhoubin Kou*</b>, Zihan Chen, Jing Yang, Cong Shen",
+    "imageSrc": "images/jsac_26.png",
+    "conference": "IEEE Journal on Selected Areas in Communications (JSAC), 2026",
+    "pdfLink": "https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=tpJi2zUAAAAJ&citation_for_view=tpJi2zUAAAAJ:ZeXyd9-uunAC"
+  },
+  {
+    "title": "<b>Semi-Asynchronous Over-the-Air Federated Learning over Heterogeneous Edge Devices</b>",
     "author": "<b>Zhoubin Kou*</b>, Yun Ji, Danni Yang, Sheng Zhang, Xiaoxiong Zhong",
     "imageSrc": "images/TVT25.gif",
     "conference": "IEEE Transactions on Vehicular Technology, vol. 74, no. 1, pp. 110-125, Jan. 2025",

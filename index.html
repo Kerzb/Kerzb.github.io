@@ -60,11 +60,13 @@
       <h2>News</h2>
       <div class="well"> 
          <ul> 
-          <li>[2026.05]  Started a Summer 2026 Research Internship (AI for Communication) at Samsung Research America.</li>
-          <li>[2026.04]  One paper on split federated learning is accepted to ISIT 2026. See you in Guangzhou (maybe)!</li>
-          <li>[2025.11]  Excited to have passed my PhD qualifying examination! Sincere thanks to my advisor and the committee.</li>
-          <li>[2025.09]  Delighted to attend <a href="https://arawireless.org" target="_blank">AraFest’25</a> at Iowa State University in Ames. Many thanks for the travel grant! </li>
-          <li>[2025.01]  Thrilled to join UVA and embark on my PhD journey in Charlottesville!</li>
+          <li><span class="news-date">[2026.09]</span>  <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=zh-CN&amp;user=tpJi2zUAAAAJ&amp;citation_for_view=tpJi2zUAAAAJ:ZeXyd9-uunAC" target="_blank">Lean Clients, Full Accuracy: Hybrid Zeroth-and First-Order Split Federated Learning</a> is accepted to <a class="news-venue" href="https://www.comsoc.org/publications/journals/ieee-jsac/cfp/distributed-optimization-learning-and-inference-over" target="_blank">IEEE Journal on Selected Areas in Communications</a>.</li>
+          <li><span class="news-date">[2026.08]</span>  One paper on a transformer-based neural receiver is accepted to <span class="news-venue">IEEE GLOBECOM 2026</span>. See you in Macau!</li>
+          <li><span class="news-date">[2026.05]</span>  Started a Summer 2026 Research Internship (AI for Communication) at Samsung Research America.</li>
+          <li><span class="news-date">[2026.04]</span>  One paper on split federated learning is accepted to <span class="news-venue">IEEE ISIT 2026</span>. See you in Guangzhou (maybe)!</li>
+          <li><span class="news-date">[2025.11]</span>  Excited to have passed my PhD qualifying examination! Sincere thanks to my advisor and the committee.</li>
+          <li><span class="news-date">[2025.09]</span>  Delighted to attend <a class="news-venue" href="https://arawireless.org" target="_blank">AraFest’25</a> at Iowa State University in Ames. Many thanks for the travel grant! </li>
+          <li><span class="news-date">[2025.01]</span>  Thrilled to join UVA and embark on my PhD journey in Charlottesville!</li>
           <!-- <li>[2024.06]</li> -->
         </ul>
        </div>       
@@ -73,8 +75,7 @@
 <!-- Selected Publication -->
     <div class="col-xs-12" style="margin-top:0px"> 
       <h2>Selected Publication [<a href="#">Lists</a>]</h2>
-      <div class="well"> 
-        <div id="papersContainer" class="papers-container">
+      <div id="papersContainer" class="papers-container">
 
           <script>
             // 使用 Fetch API 读取配置文件
@@ -87,14 +88,16 @@
         
               papers.forEach(paper => {
                 const paperDiv = document.createElement('div');
-                paperDiv.className = 'col-sm-12 col-md-12 ';
+                paperDiv.className = 'col-sm-12 col-md-12 well publication-block';
                 // paperDiv.style.height = '100%';
+                const paperImage = paper.imageSrc ? `
+                    <a class="pull-left hexagonContainer" href="${paper.pdfLink || '#'}">
+                      <img class="paperImage hexagonImage" src="${paper.imageSrc}">
+                    </a>` : '';
         
                 const paperContent = `
                   <div>
-                    <a class="pull-left hexagonContainer" href="${paper.pdfLink || '#'}">
-                      <img class="paperImage hexagonImage" src="${paper.imageSrc}">
-                    </a>
+                    ${paperImage}
                     <div class="media-body paperBody">
                       <h4 class="media-heading">
                         <a href="${paper.pdfLink || '#'}">${paper.title}</a>
@@ -111,8 +114,7 @@
             }
           </script>
         
-          </div>
-       </div>       
+      </div>
     </div> 
     
     <!-- <hr>  -->

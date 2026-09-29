@@ -18,6 +18,19 @@ html, body {
     color: #007BE6;
 }
 
+.news-venue {
+    color: #007BE6;
+    font-weight: 700;
+}
+
+.news-date {
+    font-weight: 700;
+}
+
+.publication-block {
+    margin-bottom: 12px;
+}
+
 .sidebaricon {
     padding-right: 1px;
 }
