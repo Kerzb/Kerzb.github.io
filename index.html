@@ -60,15 +60,40 @@
       <h2>News</h2>
       <div class="well"> 
          <ul> 
-          <li><span class="news-date">[2026.09]</span>  <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=zh-CN&amp;user=tpJi2zUAAAAJ&amp;citation_for_view=tpJi2zUAAAAJ:ZeXyd9-uunAC" target="_blank">Lean Clients, Full Accuracy: Hybrid Zeroth-and First-Order Split Federated Learning</a> is accepted to <a class="news-venue" href="https://www.comsoc.org/publications/journals/ieee-jsac/cfp/distributed-optimization-learning-and-inference-over" target="_blank">IEEE Journal on Selected Areas in Communications</a>.</li>
-          <li><span class="news-date">[2026.08]</span>  One paper on a transformer-based neural receiver is accepted to <span class="news-venue">IEEE GLOBECOM 2026</span>. See you in Macau!</li>
-          <li><span class="news-date">[2026.05]</span>  Started a Summer 2026 Research Internship (AI for Communication) at Samsung Research America.</li>
-          <li><span class="news-date">[2026.04]</span>  One paper on split federated learning is accepted to <span class="news-venue">IEEE ISIT 2026</span>. See you in Guangzhou (maybe)!</li>
-          <li><span class="news-date">[2025.11]</span>  Excited to have passed my PhD qualifying examination! Sincere thanks to my advisor and the committee.</li>
-          <li><span class="news-date">[2025.09]</span>  Delighted to attend <a class="news-venue" href="https://arawireless.org" target="_blank">AraFest’25</a> at Iowa State University in Ames. Many thanks for the travel grant! </li>
-          <li><span class="news-date">[2025.01]</span>  Thrilled to join UVA and embark on my PhD journey in Charlottesville!</li>
+          <li data-news-date="2026.09"><span class="news-date">[2026.09]</span>  <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=zh-CN&amp;user=tpJi2zUAAAAJ&amp;citation_for_view=tpJi2zUAAAAJ:ZeXyd9-uunAC" target="_blank">Lean Clients, Full Accuracy: Hybrid Zeroth-and First-Order Split Federated Learning</a> is accepted to <a class="news-venue" href="https://www.comsoc.org/publications/journals/ieee-jsac/cfp/distributed-optimization-learning-and-inference-over" target="_blank">IEEE Journal on Selected Areas in Communications</a>.</li>
+          <li data-news-date="2026.08"><span class="news-date">[2026.08]</span>  One paper on a transformer-based neural receiver is accepted to <span class="news-venue">IEEE GLOBECOM 2026</span>. See you in Macau!</li>
+          <li data-news-date="2026.05"><span class="news-date">[2026.05]</span>  Started a Summer 2026 Research Internship (AI for Communication) at Samsung Research America.</li>
+          <li data-news-date="2026.04"><span class="news-date">[2026.04]</span>  One paper on split federated learning is accepted to <span class="news-venue">IEEE ISIT 2026</span>. See you in Guangzhou (maybe)!</li>
+          <li data-news-date="2025.11"><span class="news-date">[2025.11]</span>  Excited to have passed my PhD qualifying examination! Sincere thanks to my advisor and the committee.</li>
+          <li data-news-date="2025.09"><span class="news-date">[2025.09]</span>  Delighted to attend <a class="news-venue" href="https://arawireless.org" target="_blank">AraFest’25</a> at Iowa State University in Ames. Many thanks for the travel grant! </li>
+          <li data-news-date="2025.01"><span class="news-date">[2025.01]</span>  Thrilled to join UVA and embark on my PhD journey in Charlottesville!</li>
           <!-- <li>[2024.06]</li> -->
         </ul>
+        <button id="newsToggle" class="btn btn-sm news-toggle" type="button" hidden>Show all news</button>
+        <script>
+          (() => {
+            const newsItems = Array.from(document.querySelectorAll('[data-news-date]'));
+            const toggle = document.getElementById('newsToggle');
+            const today = new Date();
+            const currentMonth = today.getFullYear() * 12 + today.getMonth();
+            const olderItems = newsItems.filter(item => {
+              const [year, month] = item.dataset.newsDate.split('.').map(Number);
+              const itemMonth = year * 12 + month - 1;
+              return currentMonth - itemMonth >= 12;
+            });
+
+            if (olderItems.length === 0) return;
+
+            olderItems.forEach(item => item.classList.add('news-item-hidden'));
+            toggle.hidden = false;
+            toggle.addEventListener('click', () => {
+              const showingAll = toggle.dataset.showingAll === 'true';
+              olderItems.forEach(item => item.classList.toggle('news-item-hidden', showingAll));
+              toggle.dataset.showingAll = String(!showingAll);
+              toggle.textContent = showingAll ? 'Show all news' : 'Show recent news';
+            });
+          })();
+        </script>
        </div>       
     </div> 
 

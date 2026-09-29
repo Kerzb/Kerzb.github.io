@@ -27,6 +27,14 @@ html, body {
     font-weight: 700;
 }
 
+.news-item-hidden {
+    display: none;
+}
+
+.news-toggle {
+    margin: 0 0 12px 30px;
+}
+
 .publication-block {
     margin-bottom: 12px;
 }
